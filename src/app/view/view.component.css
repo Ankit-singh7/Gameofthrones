@@ -1,0 +1,31 @@
+
+.panel-heading
+{
+    color:white;
+    font-size:48px;
+    padding:5px;
+}
+
+.panel-heading a
+{
+ 
+    float:right;
+    margin-right:15px;
+
+}
+
+.panel-body
+{
+    background-image:url('src/assets/images/faces.jpeg')
+}
+
+.panel-body p{
+    color:white;
+    font-size:30px;
+}
+
+.container-fluid
+{
+    background-color:#111111;
+    height:100%;
+}

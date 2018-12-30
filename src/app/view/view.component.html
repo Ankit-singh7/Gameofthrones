@@ -1,0 +1,55 @@
+
+<div class="container-fluid">
+
+
+  <div class="row">
+   <div class="col-12 text-center" [(ngModel)]="searchedText" ></div>
+   <br>
+    <div  class="col-12 text-center" *ngFor= "let char of details| filter:searchedText">
+    
+        <div class="panel panel-default " @fade>
+            <div class="panel-heading bg-dark animated flip ">{{char.characterName | titlecase}} <a href="/"><i class="fa fa-arrow-circle-left" style="color:grey"></i></a></div>
+            <div class="panel-body">
+          
+   
+              <p>{{char.actorName}}</p><br>
+              <div *ngIf="char.houseName"><p ><span style="color:aquamarine;font-size:40">House: </span>{{char.houseName}}</p></div>
+              <br>
+              
+              <div *ngIf="char.royal" ><p> <span style="color:aquamarine;font-size:40">Royal: </span>{{char.royal}}</p></div>
+              <br>
+
+              <div *ngIf="char.parents" ><p> <span style="color:aquamarine;font-size:40">Parents: </span><span *ngFor="let parents of char.parents;let first=first;let last=last">{{parents}}{{last?' ':' , '}}</span></p></div>
+              <br>
+              
+              <div *ngIf="char.siblings"><p><span style="color:aquamarine;font-size:40">Siblings: </span><span *ngFor="let siblings of char.siblings;let first=first;let last=last">{{siblings}}{{last?' ':' , '}}</span></p></div>
+              
+              <br>
+              <div  *ngIf="char.nickname"><p> <span style="color:aquamarine;font-size:40">Nickname: </span>{{char.nickname}}</p></div>
+              
+              <br>
+              
+             <div *ngIf="char.killed"> <p> <span style="color:aquamarine;font-size:40">Killed: </span ><span *ngFor="let kill of char.killed;let first=first;let last=last" >{{kill}}{{last? ' ':' , '}}</span></p></div>
+              <br>
+             <div *ngIf="char.servedBy"><p><span style="color:aquamarine;font-size:40">Served By: </span ><span *ngFor="let servedBy of char.servedBy;let first=first;let last=last" >{{servedBy}}{{last? ' ':' , '}}</span></p></div>
+             <br>
+             <div *ngIf="char.parentOf"><p><span style="color:aquamarine;font-size:40">Parent of: </span ><span *ngFor="let parentOf of char.parentOf;let first=first;let last=last" >{{parentOf}}{{last? ' ':' , '}}</span></p></div>
+             <br>
+              <div *ngIf="char.marriedEngaged"><p><span style="color:aquamarine;font-size:40">married Engaged: </span ><span *ngFor="let marriedEngaged of char.marriedEngaged;let first=first;let last=last" >{{marriedEngaged}}{{last? ' ':' , '}}</span></p></div>
+              <br>
+              <div  *ngIf="char.serves" ><p> <span style="color:aquamarine;font-size:40">serves: </span><span *ngFor="let serves of char.serves;let first=first;let last=last">{{serves}}{{last?' ':' , '}}</span></p></div>
+             <br>
+              <div *ngIf="char.killedBy" ><p> <span style="color:aquamarine;font-size:40">KilledBy: </span><span *ngFor="let killedBy of char.killedBy;let first=first;let last=last">{{killedBy}}{{last?' ':' , '}}</span></p></div>
+              <br>
+            </div>
+            <div class="panel-footer"><br/> 
+           
+    
+            </div>
+    
+          </div>
+    </div>
+  </div>
+  <br><br>
+
+

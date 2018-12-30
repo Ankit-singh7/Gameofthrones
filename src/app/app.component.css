@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Kaushan+Script&subset=latin-ext');
+
+.head
+{
+    color:white;
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing:3px;
+    
+}
+
+
+.navbar .navbar-brand {
+    color: #d6d6d6;
+}
+
+.heading
+{
+    color:yellow;
+    font-style: italic;
+}

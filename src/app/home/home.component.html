@@ -1,0 +1,24 @@
+<div class="container-fluid">
+
+  <div class="row p-0 m-0">
+    <div class="col-sm"></div>
+
+    <div class="col-12 form-group text-center  " style="margin-top:180px;margin-right:auto">
+      <h1 class="animated flip">Winter Is Here</h1> <br><br><br>
+      <form>
+        <input type="text" id="search" #myInput placeholder="enter the name" [(ngModel)]="searchedText" name="search" #search=ngModel [placeholder]="placeholderText"
+          (keydown)="sendMessageUsingKeypress($event)">
+        <input type="submit" id="button" (click)="onGo()" value="search" [disabled]="searchedText.length<2">
+
+        <p *ngIf="search.dirty && search.value &&  search.value.length==1 " class="message">Please
+          type the correct name.</p>
+          
+
+      </form>
+    </div>
+
+    <div class="col-sm"></div>
+
+  </div>
+</div>
+
