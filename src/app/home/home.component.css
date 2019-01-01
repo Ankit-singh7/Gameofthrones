@@ -24,6 +24,7 @@ h1 {
 
 
 
+
 input {
   position: relative;
   display: inline-block;
@@ -35,7 +36,7 @@ input {
 input[type="text"] {
 
   width: 340px;
-  height: 50px;
+  height: 49px;
   border: none;
   outline: none;
   padding: 0 25px;
@@ -49,7 +50,7 @@ input[type="submit"] {
   border-radius: 0 25px 25px 0;
   width: 150px;
   height: 49px;
-  border: none;
+  
   outline: none;
   cursor: pointer;
   background:  #ff5722;
@@ -67,4 +68,49 @@ input[type="submit"]:hover {
 {
   color:white;
   font-size:30px;
+}
+
+
+@media (max-width:558px)
+{
+
+  input[type="text"] 
+  {
+    width: 200px;
+    font-size:10px;
+    
+  }
+
+  input[type="submit"]
+  {
+    width:100px;
+    top:4px;
+  }
+
+  h1
+   {
+     font-size:50px;
+   }
+  
+  
+}
+
+@media (max-width:360px)
+{
+
+  input[type="text"] 
+  {
+    width: 160px;
+    font-size:10px;
+    
+  }
+
+  input[type="submit"]
+  {
+    width:80px;
+    top:4px;
+  }
+
+
+
 }
