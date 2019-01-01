@@ -32,8 +32,8 @@ import { FilterPipe } from './filter.pipe';
 
     
     RouterModule.forRoot([
-      {path:'',redirectTo:'home',pathMatch:'full'},
       {path:'home',component:HomeComponent},
+      {path:'',redirectTo:'home',pathMatch:'full'},
       {path:'about',component:AboutComponent},
       {path:'view',component:ViewComponent}
 
